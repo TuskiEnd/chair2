@@ -58,8 +58,9 @@
             margin-right: 0;
             float: right;
         }
+
         table.contact .submit {
-            font-family: proxima-nova,sans-serif;
+            font-family: proxima-nova, sans-serif;
             font-weight: 400;
             font-size: 18px;
             color: #fff;
@@ -72,7 +73,8 @@
             box-sizing: border-box;
             border-radius: 10px;
         }
-        table.contact .submit:hover{
+
+        table.contact .submit:hover {
             background-color: #ccc;
         }
     </style>
@@ -200,7 +202,7 @@
     <div class="content">
         <div class="spacer1"></div>
 
-        <div id="contact-form">
+        <div>
             <div class="HalfColumn">
 
                 <table class="contact">
@@ -213,7 +215,7 @@
                     </tr>
                     <tr>
                         <td class="description2">
-                            <input id="nickname"  class="textfield1" required="required">
+                            <input id="nickname" class="textfield1" required="required">
                         </td>
                     </tr>
 
@@ -229,17 +231,19 @@
                         <td><p>*邮箱</p></td>
                     </tr>
                     <tr>
-                        <td class="description2"><input id="email"  class="textfield1" required="required"></td>
+                        <td class="description2"><input id="email" class="textfield1" required="required"></td>
                     </tr>
                     <tr>
                         <td><p>*填写内容</p></td>
                     </tr>
                     <tr>
                         <td>
-                            <textarea  id="content" class="message1" required="required"></textarea></td>
+                            <textarea id="content" class="message1" required="required"></textarea></td>
                     </tr>
                     <tr>
-                        <td class="description2"><button onClick="cfm_msg();" class="submit input">提交</button></td>
+                        <td class="description2">
+                            <button onClick="cfm_msg();" class="submit input">提交</button>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
@@ -423,14 +427,12 @@
     }
     $.ajax({
       url: "http://129.211.123.116/sendExternalMail",
-      contentType: "application/json; charset=utf-8",
       data: {
-        nickname: $('#nickname').val(),
-        email: $('#email').val(),
-        phone: $('#phone').val(),
-        content: $('#content').val(),
+        "nickname": $('#nickname').val(),
+        "email": $('#email').val(),
+        "phone": $('#phone').val(),
+        "content": $('#content').val(),
       },
-      method: 'post',
       success: function (result) {
         if (result == true) {
           alert('发送成功！');
@@ -458,7 +460,6 @@
 
   gtag('config', 'UA-115129881-1');
 </script>
-
 
 
 </body>
