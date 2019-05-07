@@ -53,9 +53,27 @@
             margin-right: 14.28%;
             margin-bottom: 50px;
         }
+
         .HalfColumn.nomargin {
             margin-right: 0;
             float: right;
+        }
+        table.contact .submit {
+            font-family: proxima-nova,sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: #fff;
+            width: 100%;
+            background-color: #0663A1;
+            margin-top: 35px;
+            padding: 15px;
+            border: none;
+            -webkit-appearance: none;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        table.contact .submit:hover{
+            background-color: #ccc;
         }
     </style>
 </head>
@@ -182,7 +200,7 @@
     <div class="content">
         <div class="spacer1"></div>
 
-        <form action="http://129.211.123.116/sendExternalMail" method="post" id="contact-form">
+        <div id="contact-form">
             <div class="HalfColumn">
 
                 <table class="contact">
@@ -195,7 +213,7 @@
                     </tr>
                     <tr>
                         <td class="description2">
-                            <input name="nickname" type="text" class="textfield1" required="required">
+                            <input id="nickname"  class="textfield1" required="required">
                         </td>
                     </tr>
 
@@ -204,29 +222,29 @@
                     </tr>
                     <tr>
                         <td class="description2">
-                            <input name="phone" type="phone" class="textfield1" required="required">
+                            <input id="phone" class="textfield1" required="required">
                         </td>
                     </tr>
                     <tr>
                         <td><p>*邮箱</p></td>
                     </tr>
                     <tr>
-                        <td class="description2"><input name="email" type="email" class="textfield1" required="required"></td>
+                        <td class="description2"><input id="email"  class="textfield1" required="required"></td>
                     </tr>
                     <tr>
                         <td><p>*填写内容</p></td>
                     </tr>
                     <tr>
                         <td>
-                            <textarea name="content" class="message1" required="required"></textarea></td>
+                            <textarea  id="content" class="message1" required="required"></textarea></td>
                     </tr>
                     <tr>
-                        <td class="description2"><input type="submit" class="submit corner" value="Submit"></td>
+                        <td class="description2"><button onClick="cfm_msg();" class="submit input">提交</button></td>
                     </tr>
                     </tbody>
                 </table>
             </div>
-        </form>
+        </div>
 
         <div class="HalfColumn nomargin">
             <p><span class="bold">Aurora Motors</span><br>
@@ -240,9 +258,9 @@
             <!--<div class="spacer1"></div>-->
 
             <!--<p><span class="bold">Warehouse Facilities:</span><br>-->
-                <!--Midwest Distribution Center - South Bend, Indiana<br>-->
-                <!--Southeast Distribution Center - Lake City, South Carolina&nbsp;<br>-->
-                <!--ROW Distribution Center - Shanghai, China<br>-->
+            <!--Midwest Distribution Center - South Bend, Indiana<br>-->
+            <!--Southeast Distribution Center - Lake City, South Carolina&nbsp;<br>-->
+            <!--ROW Distribution Center - Shanghai, China<br>-->
             <!--</p>-->
             <div class="spacer1"></div>
 
@@ -325,7 +343,7 @@
 
 <!--Mobile Nav-->
 <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        src="./js/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
 
@@ -380,7 +398,49 @@
     s.parentNode.insertBefore(tk, s)
   })(document);
 </script>
-
+<!--联系开始-->
+<script type="text/javascript">
+  function cfm_msg() {
+    if ($("#nickname").val() == "" || $("#nickname").val() == "请填写联系人姓名") {
+      alert("请填写联系人姓名！");
+      $("#nickname").focus();
+      return false;
+    }
+    if ($("#email").val() == "" || $("#email").val() == "请填写联系人邮箱") {
+      alert("请填写联系人邮箱！");
+      $("#email").focus();
+      return false;
+    }
+    if ($("#phone").val() == "" || $("#phone").val() == "请填写联系人手机号") {
+      alert("请填写联系人手机号！");
+      $("#phone").focus();
+      return false;
+    }
+    if ($("#content").val() == "") {
+      alert("请填写留言内容！");
+      $("#content").focus();
+      return false;
+    }
+    $.ajax({
+      url: "http://129.211.123.116/sendExternalMail",
+      contentType: "application/json; charset=utf-8",
+      data: {
+        nickname: $('#nickname').val(),
+        email: $('#email').val(),
+        phone: $('#phone').val(),
+        content: $('#content').val(),
+      },
+      method: 'post',
+      success: function (result) {
+        if (result == true) {
+          alert('发送成功！');
+        } else {
+          alert('发送失败，请重新提交！');
+        }
+      }
+    });
+  }
+</script>
 
 <!--Font Awesome v5-->
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
@@ -398,6 +458,7 @@
 
   gtag('config', 'UA-115129881-1');
 </script>
+
 
 
 </body>
