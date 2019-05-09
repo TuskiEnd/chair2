@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33415371-3887-4814-bf5c-5a185c0f6244" name="Default Changelist" comment="邮件提交3">
+    <list default="true" id="33415371-3887-4814-bf5c-5a185c0f6244" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NEMA Premium Efficiency Inverter-Duty Motors – Aurora Motors.htm" beforeDir="false" afterPath="$PROJECT_DIR$/NEMA Premium Efficiency Inverter-Duty Motors – Aurora Motors.htm" afterDir="false" />
     </list>
@@ -18,10 +18,10 @@
     <session id="-1324985524">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.0" value="3" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="3" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -42,13 +42,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="htm" value="290" />
+          <entry key="htm" value="341" />
           <entry key="txt" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="290" />
+          <entry key="HTML" value="341" />
           <entry key="PLAIN_TEXT" value="38" />
         </counts>
       </usages-collector>
@@ -59,11 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NEMA Premium Efficiency Inverter-Duty Motors – Aurora Motors.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="429" selection-start-line="429" selection-end-line="429" />
-              <folding>
-                <element signature="n#script#7;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="470">
+              <caret line="267" column="24" selection-start-line="267" selection-start-column="24" selection-end-line="267" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -125,7 +122,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -142,6 +138,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -186,7 +183,8 @@
       <workItem from="1556271068465" duration="4098000" />
       <workItem from="1556505702471" duration="1453000" />
       <workItem from="1557197562253" duration="1785000" />
-      <workItem from="1557212956372" duration="5016000" />
+      <workItem from="1557212956372" duration="5100000" />
+      <workItem from="1557389449958" duration="316000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1556274450714</created>
@@ -230,11 +228,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557221809406</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="邮件提交">
+      <created>1557223399190</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1557223399190</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17500000" />
+    <option name="totallyTimeSpent" value="17900000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-82" width="1920" height="1080" extended-state="6" />
@@ -270,9 +275,9 @@
     <MESSAGE value="remove dot" />
     <MESSAGE value="111" />
     <MESSAGE value="邮件" />
-    <MESSAGE value="邮件提交" />
     <MESSAGE value="邮件提交3" />
-    <option name="LAST_COMMIT_MESSAGE" value="邮件提交3" />
+    <MESSAGE value="邮件提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="邮件提交" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/css/reset.css">
@@ -302,11 +307,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NEMA Premium Efficiency Inverter-Duty Motors – Aurora Motors.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="429" selection-start-line="429" selection-end-line="429" />
-          <folding>
-            <element signature="n#script#7;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="470">
+          <caret line="267" column="24" selection-start-line="267" selection-start-column="24" selection-end-line="267" selection-end-column="24" />
         </state>
       </provider>
     </entry>
